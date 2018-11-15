@@ -1,0 +1,64 @@
+td {
+  /* border: 1px solid #000; */
+  padding: 10px;
+  white-space: pre;
+}
+
+.form-element {
+  display: flex;
+  flex-direction: column;
+  margin: 10px 0;
+}
+
+.form-element label {
+  font-size: 12px;
+}
+
+#main-header {
+  text-align: center;
+}
+
+#form-wrapper {
+  width: 300px;
+  padding: 20px;
+  background-color: #4b8ea7;
+  border: 1px solid #0960ae;
+  border-radius: 3px;
+  margin: 20px auto;
+  box-shadow: 0px 0px 8px 0px #9b9b9b;
+}
+
+#main-lifts-form label {
+  color: #fff
+}
+
+#weight-form-submit {
+  display: block;
+  background: #c4e5f8;
+  border: 1px solid #606060;
+  color: #1f1f1f;
+  border-radius: 3px;
+  padding: 10px;
+  margin: 0 auto;
+}
+
+#weight-table {
+  opacity: 0;
+  transition: opacity 0.5s linear;
+  margin: 0 auto;
+  width: 95%;
+}
+
+/* style override for printing */
+@media print {
+  #form-wrapper {
+    display: none;
+  }
+  td {
+    white-space: pre;
+  }
+
+  @page {
+    padding: 40px;
+  }
+}

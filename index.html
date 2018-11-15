@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>5/3/1 Planner</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" type="text/css" href="css/main.css" />
+  <script src="js/main.js"></script>
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
+</head>
+<body>
+    <h1 id="main-header">5/3/1 Planner</h1>
+    <div id="form-wrapper">
+      <form id="main-lifts-form">
+        <div class="form-element">
+          <label for="bench-1rm">Bench 1RM</label>
+          <input id="bench-1rm" type="text">
+        </div>
+
+        <div class="form-element">
+          <label for="squat-1rm">Squat 1RM</label>
+          <input id="squat-1rm" type="text">
+        </div>
+
+        <div class="form-element">
+          <label for="shoulder-1rm">Shoulder Press 1RM</label>
+          <input id="shoulder-1rm" type="text">
+        </div>
+
+        <div class="form-element">
+          <label for="deadlift-1rm">Deadlift 1RM</label>
+          <input id="deadlift-1rm" type="text">
+        </div>
+
+        <div class="form-element">
+          <label for="variant-select">Select a variant:</label>
+          <select id="variant-select">
+            <option value="boringButBig">Boring But Big</option>
+          </select>
+        </div>
+
+        <input id="weight-form-submit" type="submit" value="Create Program">
+
+      </form>
+    </div>
+
+    <div class="table-responsive">
+      <table id="weight-table" class="table table-bordered">
+        <thead>
+          <tr>
+            <th>&nbsp;</th>
+            <th>Bench</th>
+            <th>Squat</th>
+            <th>Shoulder Press</th>
+            <th>Deadlift</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Week 1</td>
+            <td id="bench1"></td>
+            <td id="squat1"></td>
+            <td id="shoulder1"></td>
+            <td id="deadlift1"></td>
+          </tr>
+          <tr>
+            <td>Week 2</td>
+            <td id="bench2"></td>
+            <td id="squat2"></td>
+            <td id="shoulder2"></td>
+            <td id="deadlift2"></td>
+          </tr>
+          <tr>
+            <td>Week 3</td>
+            <td id="bench3"></td>
+            <td id="squat3"></td>
+            <td id="shoulder3"></td>
+            <td id="deadlift3"></td>
+          </tr>
+          <tr>
+            <td>Week 4</td>
+            <td id="bench4"></td>
+            <td id="squat4"></td>
+            <td id="shoulder4"></td>
+            <td id="deadlift4"></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  
+  
+</body>
+</html>
