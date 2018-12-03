@@ -38,16 +38,16 @@ function createPlanner(rawBench, rawSquat, rawShoulder, rawDeadlift, selectedVar
     percent *= 0.01;
     switch(exercise) {
       case 'bench':
-        return Math.round(wBench * percent);
+        return Math.round(wBench * percent / 5) * 5;
         break;
       case 'squat':
-        return Math.round(wSquat * percent);
+        return Math.round(wSquat * percent / 5) * 5;
         break;
       case 'shoulder':
-        return Math.round(wShoulder * percent);
+        return Math.round(wShoulder * percent / 5) * 5;
         break;
       case 'deadlift':
-        return Math.round(wDeadlift * percent);
+        return Math.round(wDeadlift * percent / 5) * 5;
         break;
     }
   }
