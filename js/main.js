@@ -11,7 +11,7 @@
  * @param {String} rawDeadlift  One rep max for deadlift, without 90% modifier
  */
 function createPlanner(rawBench, rawSquat, rawShoulder, rawDeadlift, selectedVariant) {
-  const WORKING_MULT = 0.9
+  const WORKING_MULT = 1; // can set this to 0.9 if calculating initial lifts | TODO: Create button for first time program?
   const wBench = rawBench * WORKING_MULT;
   const wSquat = rawSquat * WORKING_MULT;
   const wShoulder = rawShoulder * WORKING_MULT;
@@ -60,6 +60,7 @@ function createPlanner(rawBench, rawSquat, rawShoulder, rawDeadlift, selectedVar
    */
   function fillTableDay(exercise, week, accs) {
     let id = exercise + week;
+    // Warmups
     let dayString =
 `5r @ ${weights(exercise, 30)}
 5r @ ${weights(exercise, 40)}
@@ -96,12 +97,15 @@ Working Sets
 `;
       break;
     case 4:
-      dayString +=
+      // overridde warmups since it's deload week
+      dayString =
 `
+Warm-Up
+
 Working Sets
+5r @ ${weights(exercise, 40)}
 5r @ ${weights(exercise, 50)}
-5r @ ${weights(exercise, 50)}
-5r @ ${weights(exercise, 50)}
+5r @ ${weights(exercise, 60)}
 `;
       break;
     } // End switch(week)
